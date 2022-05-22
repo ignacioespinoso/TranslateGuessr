@@ -5,6 +5,8 @@
 //  Created by Ignácio Ribeiro on 21/05/22.
 //
 
+import Foundation
+
 protocol EvaluatorBusinessLogic {
     func load()
 }
@@ -41,7 +43,7 @@ final class EvaluatorInteractor {
     private let service: TranslationServiceProtocol
     private let presenter: EvaluatorPresenter
     private var state: EvaluatorState
-
+    private var timer: Timer?
     
     init(
         service: TranslationServiceProtocol,
@@ -51,7 +53,6 @@ final class EvaluatorInteractor {
         self.service = service
         self.presenter = presenter
         self.state = state
-
     }
     
     func loadInitialState() -> EvaluatorState {
@@ -59,8 +60,6 @@ final class EvaluatorInteractor {
         let translationState = TranslationState(translationPair: translationPair, isCorrect: false)
         return EvaluatorState(currentTranslation: translationState)
     }
-    
-    
 }
 
 extension EvaluatorInteractor: EvaluatorBusinessLogic {
@@ -77,6 +76,7 @@ extension EvaluatorInteractor: EvaluatorBusinessLogic {
             presenter.present(content: self.state.currentTranslationState.translationPair,
                               correctAttempts: state.correctAnswersAmount,
                               wrongAttempts: state.wrongAnswersAmount)
+            self.startTimer()
         case .failure(let error):
             presenter.present(error: error)
         }
@@ -107,15 +107,51 @@ extension EvaluatorInteractor: EvaluatorBusinessLogic {
         let value = Int.random(in: 0...4)
         return value == 1
     }
+    
+    private func startTimer() {
+        guard self.timer == nil else { return }
+
+        self.timer = Timer.scheduledTimer(
+            timeInterval: 5.0,
+            target: self,
+            selector: #selector(handleTimeout),
+            userInfo: nil,
+            repeats: false
+        )
+    }
+    
+    func stopTimer() {
+        self.timer?.invalidate()
+        self.timer = nil
+    }
+    
+    @objc private func handleTimeout() {
+        self.stopTimer()
+        self.state.wrongAnswersAmount += 1
+        self.evaluateEndScenario()
+        self.load()
+    }
+    
+    private func evaluateEndScenario() {
+        if (self.state.wrongAnswersAmount >= 3 || self.state.correctAnswersAmount + self.state.wrongAnswersAmount >= 15) {
+            self.endGame()
+        }
+    }
+    
+    private func endGame() {
+        exit(EXIT_SUCCESS)
+    }
 }
 
 extension EvaluatorInteractor: EvaluatorRequestProcessor {
     func assessEvaluation(assessment: Bool) {
+        self.stopTimer()
         if (assessment == self.state.currentTranslationState.isCorrect) {
             self.state.correctAnswersAmount += 1
         } else {
             self.state.wrongAnswersAmount += 1
         }
+        self.evaluateEndScenario()
         self.load()
     }
 }
