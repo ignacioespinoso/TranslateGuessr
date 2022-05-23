@@ -6,31 +6,32 @@
 //
 
 protocol EvaluatorPresentationLogic {
-    func present(content: TranslationPair, correctAttempts: Int, wrongAttempts: Int)
+    func present(content: EvaluatorContent)
     func present(error: Error)
-    func presentLoading()
 }
 
 final class EvaluatorPresenter {
     weak var controller: EvaluatorDisplayLogic?
 }
 
+struct EvaluatorContent {
+    let translationPair: TranslationPair
+    let correctAttempts: Int
+    let wrongAttempts: Int
+}
+
 extension EvaluatorPresenter: EvaluatorPresentationLogic {
-    func present(content: TranslationPair, correctAttempts: Int, wrongAttempts: Int) {
+    func present(content: EvaluatorContent) {
         let viewModel = EvaluatorView.ViewModel(
-            translatedWord: content.sourceString,
-            sourceWord: content.targetString,
-            correctAttempts: correctAttempts,
-            wrongAttempts: wrongAttempts
+            translatedWord: content.translationPair.targetString,
+            sourceWord: content.translationPair.sourceString,
+            correctAttempts: content.correctAttempts,
+            wrongAttempts: content.wrongAttempts
         )
 
         controller?.display(content: viewModel)
     }
 
-    func presentLoading() {
-        controller?.displayLoading()
-    }
-    
     func present(error: Error) {
         controller?.displayError()
     }

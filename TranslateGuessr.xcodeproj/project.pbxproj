@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66DFDDB283AC24100569336 /* EvaluatorInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDDA283AC24100569336 /* EvaluatorInteractorTests.swift */; };
+		F66DFDDD283AC26100569336 /* EvaluatorViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDDC283AC26100569336 /* EvaluatorViewControllerTests.swift */; };
+		F66DFDDF283AC27C00569336 /* EvaluatorPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDDE283AC27C00569336 /* EvaluatorPresenterTests.swift */; };
+		F66DFDE1283ACCBC00569336 /* EvaluatorDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDE0283ACCBC00569336 /* EvaluatorDisplayLogicSpy.swift */; };
+		F66DFDE3283AD21300569336 /* EvaluatorBusinessLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDE2283AD21300569336 /* EvaluatorBusinessLogicSpy.swift */; };
+		F66DFDE5283AD21D00569336 /* EvaluatorViewProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDE4283AD21D00569336 /* EvaluatorViewProtocolSpy.swift */; };
+		F66DFDE7283AD49000569336 /* TranslationServiceProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDE6283AD49000569336 /* TranslationServiceProtocolSpy.swift */; };
+		F66DFDE9283AD51400569336 /* EvaluatorPresentationLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DFDE8283AD51400569336 /* EvaluatorPresentationLogicSpy.swift */; };
 		F6C903E02839118C0085DEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C903DF2839118C0085DEA0 /* AppDelegate.swift */; };
 		F6C903E22839118C0085DEA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C903E12839118C0085DEA0 /* SceneDelegate.swift */; };
 		F6C903E42839118C0085DEA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C903E32839118C0085DEA0 /* ViewController.swift */; };
 		F6C903E72839118C0085DEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C903E52839118C0085DEA0 /* Main.storyboard */; };
 		F6C903E92839118D0085DEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C903E82839118D0085DEA0 /* Assets.xcassets */; };
 		F6C903EC2839118D0085DEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C903EA2839118D0085DEA0 /* LaunchScreen.storyboard */; };
-		F6C903F72839118E0085DEA0 /* TranslateGuessrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C903F62839118E0085DEA0 /* TranslateGuessrTests.swift */; };
-		F6C904012839118E0085DEA0 /* TranslateGuessrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C904002839118E0085DEA0 /* TranslateGuessrUITests.swift */; };
-		F6C904032839118E0085DEA0 /* TranslateGuessrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C904022839118E0085DEA0 /* TranslateGuessrUITestsLaunchTests.swift */; };
 		F6C90411283913A90085DEA0 /* EvaluatorSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C90410283913A90085DEA0 /* EvaluatorSceneConfigurator.swift */; };
 		F6C904142839142E0085DEA0 /* EvaluatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C904132839142E0085DEA0 /* EvaluatorView.swift */; };
 		F6C90416283914E70085DEA0 /* EvaluatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C90415283914E70085DEA0 /* EvaluatorViewController.swift */; };
@@ -36,16 +41,17 @@
 			remoteGlobalIDString = F6C903DB2839118C0085DEA0;
 			remoteInfo = TranslateGuessr;
 		};
-		F6C903FD2839118E0085DEA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6C903D42839118C0085DEA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F6C903DB2839118C0085DEA0;
-			remoteInfo = TranslateGuessr;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F66DFDDA283AC24100569336 /* EvaluatorInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorInteractorTests.swift; sourceTree = "<group>"; };
+		F66DFDDC283AC26100569336 /* EvaluatorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorViewControllerTests.swift; sourceTree = "<group>"; };
+		F66DFDDE283AC27C00569336 /* EvaluatorPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorPresenterTests.swift; sourceTree = "<group>"; };
+		F66DFDE0283ACCBC00569336 /* EvaluatorDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		F66DFDE2283AD21300569336 /* EvaluatorBusinessLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorBusinessLogicSpy.swift; sourceTree = "<group>"; };
+		F66DFDE4283AD21D00569336 /* EvaluatorViewProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorViewProtocolSpy.swift; sourceTree = "<group>"; };
+		F66DFDE6283AD49000569336 /* TranslationServiceProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationServiceProtocolSpy.swift; sourceTree = "<group>"; };
+		F66DFDE8283AD51400569336 /* EvaluatorPresentationLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorPresentationLogicSpy.swift; sourceTree = "<group>"; };
 		F6C903DC2839118C0085DEA0 /* TranslateGuessr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateGuessr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C903DF2839118C0085DEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C903E12839118C0085DEA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +61,6 @@
 		F6C903EB2839118D0085DEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6C903ED2839118D0085DEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C903F22839118E0085DEA0 /* TranslateGuessrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateGuessrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6C903F62839118E0085DEA0 /* TranslateGuessrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateGuessrTests.swift; sourceTree = "<group>"; };
-		F6C903FC2839118E0085DEA0 /* TranslateGuessrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateGuessrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6C904002839118E0085DEA0 /* TranslateGuessrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateGuessrUITests.swift; sourceTree = "<group>"; };
-		F6C904022839118E0085DEA0 /* TranslateGuessrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateGuessrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F6C90410283913A90085DEA0 /* EvaluatorSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorSceneConfigurator.swift; sourceTree = "<group>"; };
 		F6C904132839142E0085DEA0 /* EvaluatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorView.swift; sourceTree = "<group>"; };
 		F6C90415283914E70085DEA0 /* EvaluatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatorViewController.swift; sourceTree = "<group>"; };
@@ -86,22 +88,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6C903F92839118E0085DEA0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F66DFDD8283AB94500569336 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				F66DFDDA283AC24100569336 /* EvaluatorInteractorTests.swift */,
+				F66DFDDC283AC26100569336 /* EvaluatorViewControllerTests.swift */,
+				F66DFDDE283AC27C00569336 /* EvaluatorPresenterTests.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		F66DFDD9283AB94E00569336 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F66DFDE0283ACCBC00569336 /* EvaluatorDisplayLogicSpy.swift */,
+				F66DFDE2283AD21300569336 /* EvaluatorBusinessLogicSpy.swift */,
+				F66DFDE4283AD21D00569336 /* EvaluatorViewProtocolSpy.swift */,
+				F66DFDE6283AD49000569336 /* TranslationServiceProtocolSpy.swift */,
+				F66DFDE8283AD51400569336 /* EvaluatorPresentationLogicSpy.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F6C903D32839118C0085DEA0 = {
 			isa = PBXGroup;
 			children = (
 				F6C903DE2839118C0085DEA0 /* TranslateGuessr */,
 				F6C903F52839118E0085DEA0 /* TranslateGuessrTests */,
-				F6C903FF2839118E0085DEA0 /* TranslateGuessrUITests */,
 				F6C903DD2839118C0085DEA0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +127,6 @@
 			children = (
 				F6C903DC2839118C0085DEA0 /* TranslateGuessr.app */,
 				F6C903F22839118E0085DEA0 /* TranslateGuessrTests.xctest */,
-				F6C903FC2839118E0085DEA0 /* TranslateGuessrUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,18 +152,10 @@
 		F6C903F52839118E0085DEA0 /* TranslateGuessrTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6C903F62839118E0085DEA0 /* TranslateGuessrTests.swift */,
+				F66DFDD9283AB94E00569336 /* Mocks */,
+				F66DFDD8283AB94500569336 /* TestCases */,
 			);
 			path = TranslateGuessrTests;
-			sourceTree = "<group>";
-		};
-		F6C903FF2839118E0085DEA0 /* TranslateGuessrUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F6C904002839118E0085DEA0 /* TranslateGuessrUITests.swift */,
-				F6C904022839118E0085DEA0 /* TranslateGuessrUITestsLaunchTests.swift */,
-			);
-			path = TranslateGuessrUITests;
 			sourceTree = "<group>";
 		};
 		F6C9040F283913600085DEA0 /* Evaluator */ = {
@@ -227,24 +234,6 @@
 			productReference = F6C903F22839118E0085DEA0 /* TranslateGuessrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F6C903FB2839118E0085DEA0 /* TranslateGuessrUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F6C9040C2839118E0085DEA0 /* Build configuration list for PBXNativeTarget "TranslateGuessrUITests" */;
-			buildPhases = (
-				F6C903F82839118E0085DEA0 /* Sources */,
-				F6C903F92839118E0085DEA0 /* Frameworks */,
-				F6C903FA2839118E0085DEA0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F6C903FE2839118E0085DEA0 /* PBXTargetDependency */,
-			);
-			name = TranslateGuessrUITests;
-			productName = TranslateGuessrUITests;
-			productReference = F6C903FC2839118E0085DEA0 /* TranslateGuessrUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,10 +248,6 @@
 						CreatedOnToolsVersion = 13.4;
 					};
 					F6C903F12839118E0085DEA0 = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = F6C903DB2839118C0085DEA0;
-					};
-					F6C903FB2839118E0085DEA0 = {
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = F6C903DB2839118C0085DEA0;
 					};
@@ -283,7 +268,6 @@
 			targets = (
 				F6C903DB2839118C0085DEA0 /* TranslateGuessr */,
 				F6C903F12839118E0085DEA0 /* TranslateGuessrTests */,
-				F6C903FB2839118E0085DEA0 /* TranslateGuessrUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,13 +284,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F6C903F02839118E0085DEA0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6C903FA2839118E0085DEA0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,16 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C903F72839118E0085DEA0 /* TranslateGuessrTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6C903F82839118E0085DEA0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6C904032839118E0085DEA0 /* TranslateGuessrUITestsLaunchTests.swift in Sources */,
-				F6C904012839118E0085DEA0 /* TranslateGuessrUITests.swift in Sources */,
+				F66DFDE5283AD21D00569336 /* EvaluatorViewProtocolSpy.swift in Sources */,
+				F66DFDE9283AD51400569336 /* EvaluatorPresentationLogicSpy.swift in Sources */,
+				F66DFDDD283AC26100569336 /* EvaluatorViewControllerTests.swift in Sources */,
+				F66DFDE3283AD21300569336 /* EvaluatorBusinessLogicSpy.swift in Sources */,
+				F66DFDDB283AC24100569336 /* EvaluatorInteractorTests.swift in Sources */,
+				F66DFDE7283AD49000569336 /* TranslationServiceProtocolSpy.swift in Sources */,
+				F66DFDDF283AC27C00569336 /* EvaluatorPresenterTests.swift in Sources */,
+				F66DFDE1283ACCBC00569336 /* EvaluatorDisplayLogicSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +335,6 @@
 			isa = PBXTargetDependency;
 			target = F6C903DB2839118C0085DEA0 /* TranslateGuessr */;
 			targetProxy = F6C903F32839118E0085DEA0 /* PBXContainerItemProxy */;
-		};
-		F6C903FE2839118E0085DEA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F6C903DB2839118C0085DEA0 /* TranslateGuessr */;
-			targetProxy = F6C903FD2839118E0085DEA0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -598,42 +568,6 @@
 			};
 			name = Release;
 		};
-		F6C9040D2839118E0085DEA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B73YH55T95;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ignacioribeiro.TranslateGuessrUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TranslateGuessr;
-			};
-			name = Debug;
-		};
-		F6C9040E2839118E0085DEA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B73YH55T95;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ignacioribeiro.TranslateGuessrUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TranslateGuessr;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -660,15 +594,6 @@
 			buildConfigurations = (
 				F6C9040A2839118E0085DEA0 /* Debug */,
 				F6C9040B2839118E0085DEA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F6C9040C2839118E0085DEA0 /* Build configuration list for PBXNativeTarget "TranslateGuessrUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F6C9040D2839118E0085DEA0 /* Debug */,
-				F6C9040E2839118E0085DEA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

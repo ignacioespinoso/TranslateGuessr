@@ -41,13 +41,13 @@ class TranslationState {
 
 final class EvaluatorInteractor {
     private let service: TranslationServiceProtocol
-    private let presenter: EvaluatorPresenter
+    private let presenter: EvaluatorPresentationLogic
     private var state: EvaluatorState
     private var timer: Timer?
     
     init(
         service: TranslationServiceProtocol,
-        presenter: EvaluatorPresenter,
+        presenter: EvaluatorPresentationLogic,
         state: EvaluatorState
     ) {
         self.service = service
@@ -72,40 +72,21 @@ extension EvaluatorInteractor: EvaluatorBusinessLogic {
     private func handleLoad(result: Result<[TranslationSet], Error>) {
         switch result {
         case .success(let model):
-            self.state.currentTranslationState = getRandomTranslationState(translations: model)
-            presenter.present(content: self.state.currentTranslationState.translationPair,
-                              correctAttempts: state.correctAnswersAmount,
-                              wrongAttempts: state.wrongAnswersAmount)
-            self.startTimer()
+            if (model.count > 1) {
+                self.state.currentTranslationState = service.getRandomTranslationState(translations: model, correctOdds: 25)
+                presenter.present(content: EvaluatorContent(
+                    translationPair: self.state.currentTranslationState.translationPair,
+                    correctAttempts: self.state.correctAnswersAmount,
+                    wrongAttempts: self.state.wrongAnswersAmount)
+                )
+                self.startTimer()
+            } else {
+                presenter.present(error: EvaluatorBusinessLogicError.missingTranslations)
+            }
+            
         case .failure(let error):
             presenter.present(error: error)
         }
-    }
-    
-    private func getRandomTranslationState(translations: [TranslationSet]) -> TranslationState {
-        let sourceIndex = Int.random(in: 0..<translations.count)
-        let isCorrectTranslation = shouldGetCorrectTranslation()
-        var translationIndex = sourceIndex
-        
-        if (!isCorrectTranslation) {
-            translationIndex = getWrongIndex(correctIndex: sourceIndex, arraySize: translations.count)
-        }
-        
-        let translationPair = TranslationPair(sourceString: translations[sourceIndex].english, targetString: translations[translationIndex].spanish)
-        return TranslationState(translationPair: translationPair, isCorrect: isCorrectTranslation)
-    }
-    
-    private func getWrongIndex(correctIndex: Int, arraySize: Int) -> Int {
-        var wrongIndex = Int.random(in: 0..<arraySize)
-        while(wrongIndex == correctIndex) {
-            wrongIndex = Int.random(in: 0..<arraySize)
-        }
-        return wrongIndex
-    }
-    
-    private func shouldGetCorrectTranslation() -> Bool {
-        let value = Int.random(in: 0...4)
-        return value == 1
     }
     
     private func startTimer() {
@@ -154,4 +135,8 @@ extension EvaluatorInteractor: EvaluatorRequestProcessor {
         self.evaluateEndScenario()
         self.load()
     }
+}
+
+enum EvaluatorBusinessLogicError: Error {
+    case missingTranslations
 }

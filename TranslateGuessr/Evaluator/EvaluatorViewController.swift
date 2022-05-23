@@ -9,7 +9,6 @@ import UIKit
 
 protocol EvaluatorDisplayLogic: AnyObject {
     func display(content: EvaluatorView.ViewModel)
-    func displayLoading()
     func displayError()
 }
 
@@ -41,17 +40,12 @@ final class EvaluatorViewController: UIViewController {
 }
 
 extension EvaluatorViewController: EvaluatorDisplayLogic {
-    func displayLoading() {
-        print("Display loading")
-    }
-
-    func displayError() {
-        print("Display error")
-    }
-
     func display(content: EvaluatorView.ViewModel) {
-//        removeLoadView()
         customView.configure(display: content)
+    }
+    
+    func displayError() {
+        print("Display error!")
     }
 }
 
